@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Define the Console Appender -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- Define the layout for the Console Appender -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <!-- Sample Pattern: Date LogLevel [Thread] ClassName - Message -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %class{36} - %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <!-- Define the logging level for the root logger and add the Console Appender to it -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
